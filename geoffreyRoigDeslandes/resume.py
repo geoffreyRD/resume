@@ -24,7 +24,9 @@ class Resume:
             phone_number: int,
             LinkedIn: str,
             nationality: str,
-            spoken_languages: list):
+            spoken_languages: list,
+            technical_skills: list,
+            soft_skills: list):
         """
         In this __init__ function you can find my personal information.
         """
@@ -68,11 +70,13 @@ class Resume:
         list_task = ', '.join(map(str, achievements))
 
         if to_ == 'Current':
-            output = f"""I currently work as a {position} at {company}.
+            output = f"""
+            I currently work as a {position} at {company}.
             I have been working there since {to_}, amongst other tasks, I {list_task}.
             """
         else:
-            output = f"""I worked as a {position} at {company} between {from_} and {to_}.
+            output = f"""
+            I worked as a {position} at {company} between {from_} and {to_}.
             Amongst other tasks, I {list_task}.
             """
         return output
@@ -97,7 +101,7 @@ Geoffrey_Roig_Deslandes = Resume(
     last_name='Roig-Deslandes',
     address={
         'Street': 'Saint Charles',
-        'Number': '2855A'
+        'Number': '2855A',
         'Appartement Number': '102',
         'Zip Code': 'H3K 3J1',
         'City': 'Montreal',
@@ -108,7 +112,7 @@ Geoffrey_Roig_Deslandes = Resume(
     LinkedIn='https://www.linkedin.com/in/geoffreyroig/?locale=en_US',
     nationality='French',
     spoken_languages={
-        'Danish': 'In Progress :)'
+        'Danish': 'In Progress :)',
         'English': 'Fluent',
         'French': 'Fluent',
         'German': 'Basics'})
