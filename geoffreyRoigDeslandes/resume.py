@@ -24,7 +24,7 @@ class Resume:
             phone_number: int,
             LinkedIn: str,
             nationality: str,
-            spoken_languages: list,
+            spoken_languages: dict,
             technical_skills: list,
             soft_skills: list):
         """
@@ -38,6 +38,8 @@ class Resume:
         self.LinkedIn = LinkedIn
         self.nationality = nationality
         self.spoken_languages = spoken_languages
+        self.technical_skills = technical_skills
+        self.soft_skills = soft_skills
 
     @staticmethod
     def education(
@@ -115,7 +117,26 @@ Geoffrey_Roig_Deslandes = Resume(
         'Danish': 'In Progress :)',
         'English': 'Fluent',
         'French': 'Fluent',
-        'German': 'Basics'})
+        'German': 'Basics'},
+    technical_skills=[
+        'SQL',
+        'Python',
+        'Git',
+        'AWS',
+        'Time Series Forecasting',
+        'Data Mining',
+        'Supervized learning',
+        'Unsupervized learning'
+    ],
+    soft_skills=[
+        'Team player',
+        'Creative',
+        'Business knowledge',
+        'Critical thinking',
+        'Desite to learn'
+    ]
+    )
+
 
 ####################################################################################################
 # PROFESSIONAL EXPERIENCE
