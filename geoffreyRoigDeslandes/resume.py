@@ -6,10 +6,10 @@ class Resume:
     Thank you for taking the time to review my application :)
 
     The first part of the document defines all the functions I need to enter all
-    the relevent information about my application. If you are not interested in
+    the relevant information about my application. If you are not interested in
     this technical part, you can jump directly to line 92.
 
-    I hope you will enjoy reading it as I had a good time writing it :)
+    I hope you will enjoy Resumeing it as I had a good time writing it :)
 
     Thanks again,
 
@@ -51,11 +51,13 @@ class Resume:
             to_: str,
             main_classes: list):
 
-        list_course = ', '.join(map(str, main_classes))
+        list_course = '\n        - '.join(map(str, main_classes))
 
-        output = f""" I have a {degree} from {university}.
+        output = f"""
+        I have a {degree} in {major} from {university}.
         I studied there from {from_} to {to_}.
-        During my scholarship here I studied {list_course}.
+        During this scholarship here I studied:
+        - {list_course}.
         """
         return output
 
@@ -69,30 +71,33 @@ class Resume:
             to_: str,
             achievements: list):
 
-        list_task = ', '.join(map(str, achievements))
+        list_task = '\n            - '.join(map(str, achievements))
 
         if to_ == 'Current':
             output = f"""
             I currently work as a {position} at {company}.
-            I have been working there since {to_}, amongst other tasks, I {list_task}.
+            I have been working there since {to_}. Here is a list of some of my achievements:
+            - {list_task}.
             """
         else:
             output = f"""
             I worked as a {position} at {company} between {from_} and {to_}.
-            Amongst other tasks, I {list_task}.
+            Amongst other tasks. Here is a list of some of my achievements:
+            - {list_task}.
             """
         return output
 
-        @staticmethod
-        def activities(
-                association: str,
-                role: str,
-                city: str,
-                country: str,
-                from_: str,
-                to_: str,
-                description: str):
-            return descripion
+    @staticmethod
+    def activities(
+            association: str,
+            role: str,
+            city: str,
+            country: str,
+            from_: str,
+            to_: str,
+            description: str):
+        activity = description
+        return activity
 
 
 ####################################################################################################
@@ -141,7 +146,7 @@ Geoffrey_Roig_Deslandes = Resume(
 ####################################################################################################
 # PROFESSIONAL EXPERIENCE
 
-data_analyst = read.experience(
+data_analyst = Resume.experience(
     company='Behaviour Interactive',
     position='Data Analyst',
     city='Montreal',
@@ -156,7 +161,7 @@ data_analyst = read.experience(
         'Developed on server-to-server script for data management purposes'
     ])
 
-bi_analyst = read.experience(
+bi_analyst = Resume.experience(
     company='Keolis Canada',
     position='Business Intelligence Analyst',
     city='Montreal',
@@ -171,7 +176,7 @@ bi_analyst = read.experience(
         'Initiated a knowledge sharing initiative (Lunch & Learn)'
     ])
 
-internship = read.experience(
+internship = Resume.experience(
     company='Gameloft',
     position='Data Science Intern',
     city='Montreal',
@@ -184,7 +189,7 @@ internship = read.experience(
         'Produced cases of study to improve documentation and support business performance managers'
     ])
 
-analyst = read.experience(
+analyst = Resume.experience(
     company='Interface Transport',
     position='Transportation Analyst',
     city='Lyon',
@@ -197,7 +202,7 @@ analyst = read.experience(
 
 ####################################################################################################
 # EDUCATION
-msc_marketing = read.education(
+msc_marketing = Resume.education(
     degree='Master of Science',
     major='Marketing',
     university='HEC Montreal',
@@ -212,7 +217,7 @@ msc_marketing = read.education(
         'Customer Behaviour', 'Demand Analysis'
     ])
 
-m2_economics = read.education(
+m2_economics = Resume.education(
     degree='Master 2',
     major='Economics',
     university='Universite de Montpellier 1',
@@ -224,7 +229,7 @@ m2_economics = read.education(
         'Forecasting Methods', 'Game Theory'
     ])
 
-bachelor_economics = read.education(
+bachelor_economics = Resume.education(
     degree='Master 2',
     major='Economics',
     university='Universite de Montpellier 1',
@@ -238,7 +243,7 @@ bachelor_economics = read.education(
 
 ####################################################################################################
 # ACTIVITIES
-water_polo_referee = read.activities(
+water_polo_referee = Resume.activities(
     association='Waterpolo Quebec',
     role='Referee',
     city='Montreal',
@@ -246,12 +251,12 @@ water_polo_referee = read.activities(
     from_='October 2013',
     to_='Current',
     description="""
-    Being a referee taught me to be relentless and to
+    I have been a referee for Waterpolo Quebec October 2013. It taught me to be relentless and to
     learn from my mistakes. It has been one of the greatest challenge I ever met,
     and I proud to say that it helped me be a better person.
     """)
 
-water_polo_player = read.activities(
+water_polo_player = Resume.activities(
     association='ACC Waterpolo',
     role='Player',
     city='Montreal',
@@ -259,11 +264,11 @@ water_polo_player = read.activities(
     from_='February 2013',
     to_='September 2018',
     description="""
-    Playing waterpolo helped me develop
-    my team spirit and leadership as I also coached the team.
+    I played waterpolo at ACC Waterpolo for 5 years, and it helped me developmy team spirit and
+    leadership as I also coached the team.
     """)
 
-Ludos = read.activities(
+Ludos = Resume.activities(
     association='Ludos HEC',
     role='Member and Vice-President',
     city='Montreal',
@@ -271,6 +276,81 @@ Ludos = read.activities(
     from_='September 2014',
     to_='December 2015',
     description="""
-    Ludos is a student association whom goal is
+    During my scholarship at HEC I was an active member of Ludos, a student association whom goal is
     to promote the videogame industry to HEC students.
     """)
+
+
+# END OF MY RESUME
+####################################################################################################
+####################################################################################################
+# STARTING THIS POINT, THERE ARE ONLY COMMANDS THAT ARE NOT RELATED TO MY RESUME.
+# FEEL FREE TO TUN THE SCRIP :)
+from textwrap import dedent
+
+
+def bio():
+    introduction_part_1 = f"""
+    Hi!
+
+    If you chose to run my resume then I guess I caught your attention and you are a little
+    bit curious about me :).
+
+    But first things first.
+
+    As you probably know, my name is {Geoffrey_Roig_Deslandes.first_name}.
+
+    What's your name?
+    """
+    print(dedent(introduction_part_1))
+
+    reader_name = input("Enter your name: ")
+
+    introduction_part_2 = f"""
+    Nice to meet you {reader_name}!
+
+    Now a little bit about me.
+
+    I am sure you're wondering why a Canadian Resident is applying for a position in Copenhaguen ?
+
+    Well, after 7 wonderful years in Canada my wife and I wanted to come back closer to our
+    families. Furthermore she had a "once in a lifetime opportunity in the city, so we jumped on
+    on the occasion, and here I am, applying for this position :)
+
+    But enough about my personal life, I am sure your're also interested my experience.
+    """
+
+    to_print = [
+        introduction_part_2,
+        data_analyst,
+        bi_analyst,
+        internship,
+        analyst,
+        msc_marketing,
+        m2_economics,
+        water_polo_referee,
+        water_polo_player,
+        Ludos
+    ]
+
+    for element in to_print:
+        print(dedent(element))
+        print('Press any Enter to continue...')
+        input()
+
+    conclusion = f"""
+    That's it, you know everything about me.
+
+    Of course I would be more than happy to discuss with you {reader_name} about
+    my profile and the position. I am sure this will be an interesting conversation for both of us.
+    So do not hesitate to contact me by mail at {Geoffrey_Roig_Deslandes.email}.
+
+    Cheers,
+
+    {Geoffrey_Roig_Deslandes.first_name}.
+    """
+    print(dedent(conclusion))
+
+
+if __name__ == '__main__':
+    bio()
