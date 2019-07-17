@@ -7,7 +7,7 @@ class Resume:
 
     The first part of the document defines all the functions I need to enter all
     the relevant information about my application. If you are not interested in
-    this technical part, you can jump directly to line 92.
+    this technical part, you can jump directly to line 103.
 
     I hope you will enjoy Resumeing it as I had a good time writing it :)
 
