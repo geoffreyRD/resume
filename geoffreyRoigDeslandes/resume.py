@@ -229,18 +229,6 @@ m2_economics = Resume.education(
         'Forecasting Methods', 'Game Theory'
     ])
 
-bachelor_economics = Resume.education(
-    degree='Master 2',
-    major='Economics',
-    university='Universite de Montpellier 1',
-    country='France',
-    from_='September 2009',
-    to_='October 2011',
-    main_classes=[
-        'Microeconomics', 'Statistics',
-        'Macroeconomics', 'Finance'
-    ])
-
 ####################################################################################################
 # ACTIVITIES
 water_polo_referee = Resume.activities(
