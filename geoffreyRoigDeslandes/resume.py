@@ -9,7 +9,7 @@ class Resume:
     the relevant information about my application. If you are not interested in
     this technical part, you can jump directly to line 103.
 
-    I hope you will enjoy Resumeing it as I had a good time writing it :)
+    I hope you will enjoy reading it as I had a good time writing it :)
 
     Thanks again,
 
@@ -21,7 +21,7 @@ class Resume:
             last_name: str,
             address: dict,
             email: str,
-            phone_number: int,
+            phone_number: str,
             LinkedIn: str,
             nationality: str,
             spoken_languages: dict,
@@ -273,7 +273,7 @@ Ludos = Resume.activities(
 ####################################################################################################
 ####################################################################################################
 # STARTING THIS POINT, THERE ARE ONLY COMMANDS THAT ARE NOT RELATED TO MY RESUME.
-# FEEL FREE TO TUN THE SCRIP :)
+# FEEL FREE TO RUN THE SCRIP :)
 from textwrap import dedent
 
 
