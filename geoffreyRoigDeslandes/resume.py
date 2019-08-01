@@ -28,7 +28,7 @@ class Resume:
             technical_skills: list,
             soft_skills: list):
         """
-        In this __init__ function you can find my personal information.
+        The init function stores personal informations.
         """
         self.first_name = first_name
         self.last_name = last_name
@@ -76,13 +76,13 @@ class Resume:
         if to_ == 'Current':
             output = f"""
             I currently work as a {position} at {company}.
-            I have been working there since {to_}. Here is a list of some of my achievements:
+            I have been working there since {from_}. Here is a list of some of my achievements:
             - {list_task}.
             """
         else:
             output = f"""
             I worked as a {position} at {company} between {from_} and {to_}.
-            Amongst other tasks. Here is a list of some of my achievements:
+            Amongst other tasks, and here is a list of some of my achievements:
             - {list_task}.
             """
         return output
@@ -155,10 +155,10 @@ data_analyst = Resume.experience(
     to_='Current',
     achievements=[
         'Developed a player segmentation analysis using K-Means method',
-        'Created a model to identify potential whales based on a decision tree model',
+        'Created a model to identify potential whales based on a decision trees',
         'Trained 3 interns, one of them was hired after his internship',
         'Developed and maintained dashboard and reports using PowerBI',
-        'Developed on server-to-server script for data management purposes'
+        'Developed on server-to-server scripts for data management purposes'
     ])
 
 bi_analyst = Resume.experience(
@@ -166,11 +166,11 @@ bi_analyst = Resume.experience(
     position='Business Intelligence Analyst',
     city='Montreal',
     country='Canada',
-    from_='Juin 2016',
+    from_='June 2016',
     to_='November 2017',
     achievements=[
         'Developed a neural network model to estimate churn risk of customers',
-        'Created and maintained a predictive model for sales, using Holt & Winters method',
+        'Created and maintained a predictive model for weekly sales, using Holt & Winters method',
         'Produced ad hoc analysis for marketing campaigns',
         'Created and maintained dashboards  and reports to the attention of upper management',
         'Initiated a knowledge sharing initiative (Lunch & Learn)'
@@ -284,7 +284,7 @@ def bio():
     If you chose to run my resume then I guess I caught your attention and you are a little
     bit curious about me :).
 
-    But first things first.
+    But first things first, let's  go with the presentations.
 
     As you probably know, my name is {Geoffrey_Roig_Deslandes.first_name}.
 
@@ -297,15 +297,15 @@ def bio():
     introduction_part_2 = f"""
     Nice to meet you {reader_name}!
 
-    Now a little bit about me.
+    Well, I am sure you're wondering why a Canadian Resident is applying for a position in
+    openhaguen ?
 
-    I am sure you're wondering why a Canadian Resident is applying for a position in Copenhaguen ?
-
-    Well, after 7 wonderful years in Canada my wife and I wanted to come back closer to our
-    families. Furthermore she had a "once in a lifetime opportunity in the city, so we jumped on
+    After 7 wonderful years in Canada my wife and I wanted to come back closer to our
+    families. Furthermore she had a "once in a lifetime opportunity" in the city, so we jumped on
     on the occasion, and here I am, applying for this position :)
 
-    But enough about my personal life, I am sure your're also interested my experience.
+    But enough about my personal life, your're probably more interested with my professional
+    experiences.
     """
 
     to_print = [
@@ -314,8 +314,10 @@ def bio():
         bi_analyst,
         internship,
         analyst,
+        'About my scholarship:\n',
         msc_marketing,
         m2_economics,
+        'Finaly, concerning my hobbies and other activities:\n',
         water_polo_referee,
         water_polo_player,
         Ludos
