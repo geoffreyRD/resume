@@ -212,7 +212,7 @@ msc_marketing = Resume.education(
     main_classes=[
         'Data Mining', 'Text Mining',
         'Multidimentional Data Analysis',
-        'Quantitative Matketing',
+        'Quantitative Marketing',
         'Product and Innovation Management',
         'Customer Behaviour', 'Demand Analysis'
     ])
@@ -222,7 +222,7 @@ m2_economics = Resume.education(
     major='Economics',
     university='Universite de Montpellier 1',
     country='France',
-    from_='September 2009',
+    from_='September 2006',
     to_='October 2011',
     main_classes=[
         'Econometrics', 'Data Analysis',
@@ -237,10 +237,10 @@ water_polo_referee = Resume.activities(
     city='Montreal',
     country='Canada',
     from_='October 2013',
-    to_='Current',
+    to_='June 2019',
     description="""
-    I have been a referee for Waterpolo Quebec October 2013. It taught me to be relentless and to
-    learn from my mistakes. It has been one of the greatest challenge I ever met,
+    I have been a referee for Waterpolo Quebec between October 2013 and June 2019.
+    It taught me to be relentless and to learn from my mistakes. It has been one of the greatest challenge I ever met,
     and I proud to say that it helped me be a better person.
     """)
 
