@@ -107,27 +107,27 @@ Geoffrey_Roig_Deslandes = Resume(
     first_name='Geoffrey',
     last_name='Roig-Deslandes',
     address={
-        'Street': 'Saint Charles',
-        'Number': '2855A',
-        'Appartement Number': '102',
-        'Zip Code': 'H3K 3J1',
-        'City': 'Montreal',
-        'Contry': 'Canada'
+        'Street': 'Teglholmens Østkaj',
+        'Number': '45',
+        'Appartement Number': '2TV',
+        'Zip Code': '2450',
+        'City': 'Copenhagen',
+        'Contry': 'Denmark'
     },
     email='geoffrey.roig@gmail.com',
-    phone_number='+1 514 582 3431',
+    phone_number='+45-71-52-21-48',
     LinkedIn='https://www.linkedin.com/in/geoffreyroig/?locale=en_US',
     nationality='French',
     spoken_languages={
         'Danish': 'In Progress :)',
         'English': 'Fluent',
-        'French': 'Fluent',
-        'German': 'Basics'},
+        'French': 'Fluent'},
     technical_skills=[
         'SQL',
         'Python',
         'Git',
         'AWS',
+        'Google Cloud Services'
         'Time Series Forecasting',
         'Data Mining',
         'Supervized learning',
@@ -152,7 +152,7 @@ data_analyst = Resume.experience(
     city='Montreal',
     country='Canada',
     from_='November 2017',
-    to_='Current',
+    to_='October 2019',
     achievements=[
         'Developed a player segmentation analysis using K-Means method',
         'Created a model to identify potential whales based on a decision trees',
@@ -237,7 +237,7 @@ water_polo_referee = Resume.activities(
     city='Montreal',
     country='Canada',
     from_='October 2013',
-    to_='Current',
+    to_='September 2019',
     description="""
     I have been a referee for Waterpolo Quebec October 2013. It taught me to be relentless and to
     learn from my mistakes. It has been one of the greatest challenge I ever met,
